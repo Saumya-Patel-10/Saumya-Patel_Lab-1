@@ -1,0 +1,25 @@
+saumya.patel@Saumya-Patel:~$ uname -m
+x86_64
+saumya.patel@Saumya-Patel:~$
+
+saumya.patel@Saumya-Patel:~$ aarch64-linux-gnu-gcc --version
+qemu-aarch64 --version
+ls -l /usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1
+aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+qemu-aarch64 version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.11)
+Copyright (c) 2003-2023 Fabrice Bellard and the QEMU Project developers
+-rwxr-xr-x 1 root root 202784 Apr 15  2024 /usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1
+saumya.patel@Saumya-Patel:~$
+
+saumya.patel@Saumya-Patel:~/hello-world-Saumya-Patel-10$ aarch64-linux-gnu-gcc -g -O0 hello.S -o hello
+saumya.patel@Saumya-Patel:~/hello-world-Saumya-Patel-10$ file hello
+hello: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=b8e0b87d3bc3c6dc208de4d3a595d178cafb27c4, for GNU/Linux 3.7.0, with debug_info, not stripped
+saumya.patel@Saumya-Patel:~/hello-world-Saumya-Patel-10$ 
+
+saumya.patel@Saumya-Patel:~/hello-world-Saumya-Patel-10$ qemu-aarch64 -L /usr/aarch64-linux-gnu ./hello
+Hello from AArch64 assembly.
+saumya.patel@Saumya-Patel:~/hello-world-Saumya-Patel-10$
